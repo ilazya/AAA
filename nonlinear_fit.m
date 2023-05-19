@@ -121,13 +121,13 @@ hold on;
 plot(exp_LTD(:,1), exp_LTD(:,2), 'ro', 'LineWidth', 1);
 
 xf = 1;
-A_LTP = 0.5;
+A_LTP = 2.5;
 B_LTP = 1./(1-exp(-1./A_LTP));
-A_LTD = -0.2;
+A_LTD = -0.15;
 B_LTD = 1./(1-exp(-1./A_LTD));
 
 % LTP fitting
-var_amp = 0.035;    % LTP cycle-to-cycle variation
+var_amp = 0;    % LTP cycle-to-cycle variation
 rng(103);
 x_ltp(1) = 0;
 y_ltp(1) = 0;
@@ -146,7 +146,7 @@ end
 plot((0:n-1)/(n-1), y_ltp(1:n), 'b', 'linewidth', 2);
 
 % LTD fitting
-var_amp = 0.025;    % LTD cycle-to-cycle variation
+var_amp = 0;    % LTD cycle-to-cycle variation
 rng(898);
 x_ltd(1) = 1;
 y_ltd(1) = 1;
